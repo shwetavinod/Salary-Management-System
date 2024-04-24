@@ -1,0 +1,17 @@
+.heading{
+font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    height: 4px;
+    width: 543px;
+    margin: 82px;
+}
+.container{
+    padding: 25px;   
+    background-color: lightblue;  
+    height: 116px;
+    width: 232px;
+    margin: 84px;
+}
+.bg-image{
+    height: 200px;
+    width: 500px;
+}

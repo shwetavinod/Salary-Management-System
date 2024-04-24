@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>EMPLOYEEE SALARY DETAILS</h1>
+    <form>
+        <label>Employee-name</label>
+        <input type="text">
+        <label>Month</label>
+        <select>
+            <option>choose</option>
+            <option>january</option>
+            <option>february</option>
+            <option>march</option>
+            <option>april</option> 
+            <option>may</option>
+            <option>june</option>
+            <option>july</option>
+            <option>august</option>
+            <option>september</option>
+            <option>october</option>
+            <option>november</option>
+            <option>december</option>
+
+        </select>
+        <label>employee-title</label>
+        <select>
+            <option >choose</option>
+            <option value="1">manager</option>
+            <option value="2">dept-head</option>
+            <option value="3">project-manger</option>
+            <option value="4">permanent-employee</option> 
+            <option value="5">temporary-employee</option>
+        </select>
+        <label>Bonus</label>
+        <input id="bonus" type="number">
+        <label >Deduction</label>
+        <input id="ded" onblur="calNet()" type="number">
+        <label>Net-salary</label>
+        <input id="net" disabled type="number">
+        <button type="submit">PRINT SALARY DETAILS</button> 
+        <button type="submit">EXIT</button> 
+       
+    </form>
+    <script>
+
+
+
+        var base,netSalary;
+        var bonus = document.getElementById("bonus").value();
+        var ded = document.getElementById("ded").value();
+        function calNet(title)
+        {
+            switch(title)
+            {
+                case 1 : base = 10000;
+                         break;
+                case 2 : base = 7500;
+                         break;               
+                case 3 : base = 12500;
+                         break; 
+                case 4 : base = 11500;
+                         break;
+                case 5 : base = 5000;
+                         break;
+
+            }
+
+            netSalary = base+bonus-ded;
+            console.log(netSalary);
+            document.getElementById("net").value=netSalary;
+        }
+    </script>
+</body>
+</html>
